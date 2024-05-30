@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+  </head>
+
+  <body>
+    <!-- <h1 id="myTitle" onclick="changeContent()">Title</h1> -->
+    <h1 id="newTitle">New Title</h1>
+    <h1 class="myTitle">Title</h1>
+    <h1 class="myTitle">Title</h1>
+    <h1 class="myTitle">Title</h1>
+    <h1 class="myTitle">Title</h1>
+    <button id="btnShow">Show</button>
+    <button id="btnHide">Hide</button>
+    <!-- 
+    <button id="btnToggle">Toggle</button> -->
+    <!-- <button id="btnFadeIn">Fade In</button>
+    <button id="btnFadeOut">Fade Out</button>
+    <button id="btnFadeToggle">Fade Toggle</button>
+    <button id="btnFadeTo">Fade To</button> -->
+    <!-- <button id="slideUp">Slide In</button>
+    <button id="slideDown">Slide Out</button>
+    <button id="slideToggle">Slide Toggle</button> -->
+    <div
+      id="myDiv"
+      style="height: 50px; width: 50px; background-color: aqua"
+    ></div>
+    <button id="btnAnimate">Animate</button>
+    <button id="btnStop">Stop</button>
+  </body>
+
+  <script>
+    // function changeContent() {
+    //   $("#myTitle")[0].innerText = "New Title";
+    // }
+    // $("#myTitle").click(function () {
+    //   $(this)[0].innerText = "New Title";
+    // });
+    // $(".myTitle").click(function () {
+    //   $(this)[0].style.color = "red";
+    // });
+    // $(document).ready(function () {
+    //   $(".myTitle").mouseenter(function () {
+    //     $(this)[0].style.color = "red";
+    //     $(this)[0].style.fontSize = "4rem";
+    //   });
+    //   $(".myTitle").mouseleave(function () {
+    //     $(this)[0].style.color = "black";
+    //     $(this)[0].style.fontSize = "2rem";
+    //   });
+    // });
+
+    $("#btnHide").click(function () {
+      $(".myTitle")
+        .hide("slow", function () {
+          $("#newTitle")[0].style.color = "red";
+        })
+        .show("slow", function () {
+          $("#newTitle")[0].style.color = "black";
+        });
+    });
+
+    $("#btnShow").click(function () {
+      $(".myTitle").show("slow", function () {
+        $("#newTitle")[0].style.color = "black";
+      });
+    });
+
+    // $("#btnToggle").click(function () {
+    //   $(".myTitle").toggle();
+    // });
+
+    // $("#slideUp").click(function () {
+    //   $(".myTitle").slideUp();
+    // });
+
+    // $("#slideDown").click(function () {
+    //   $(".myTitle").slideDown();
+    // });
+
+    // $("#slideToggle").click(function () {
+    //   $(".myTitle").slideToggle();
+    // });
+
+    // $("#btnAnimate").click(function () {
+    //   $("#myDiv").animate(
+    //     {
+    //       height: "350px",
+    //       width: "350px",
+    //     },
+    //     7000
+    //   );
+    // });
+
+    // $("#btnStop").click(function () {
+    //   $("#myDiv").stop();
+    // });
+  </script>
+</html>
