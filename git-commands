@@ -1,0 +1,4 @@
+
+git rm --cached <file>
+git rm --cached -r .
+git pull https://github.com/manikant-codes/git-demo-new.git main --allow-unrelated-histories
